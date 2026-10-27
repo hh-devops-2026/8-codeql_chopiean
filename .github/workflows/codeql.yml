@@ -55,7 +55,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Build Docker image
-        run: docker build -t go-web-server
+        run: docker build -t go-web-server .
 
       - name: Run Docker container
         run: docker run -d --name go-web-server -p 8080:8080 go-web-server
