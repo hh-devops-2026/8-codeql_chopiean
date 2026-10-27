@@ -75,7 +75,7 @@ jobs:
 
       - name: Test /readfile endpoint
         run: |
-          response=$(curl -sf "http://localhost:8080/readfile?file=hello.txt")
+          response=$(curl -sf "http://localhost:8080/readfile?file=safe-files/hello.txt")
           echo "Response: $response"
           test -n "$response"
 
